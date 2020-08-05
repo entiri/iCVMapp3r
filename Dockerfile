@@ -44,6 +44,7 @@ ENV PATH=${ANTSPATH}:${PATH}
 RUN curl -LO https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh && \
     bash Miniconda3-latest-Linux-x86_64.sh -p /opt/miniconda -b && \
     rm Miniconda3-latest-Linux-x86_64.sh
+RUN conda install python=3.7.0
 ENV PATH=/opt/miniconda/bin:${PATH}
 
 # Install all needed packages based on pip installation, also update pip
