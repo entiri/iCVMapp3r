@@ -3,6 +3,7 @@ from icvmapper import __version__
 
 setup(
     name='iCVMapp3r',
+    python_requires='3.5.2',
     version=__version__,
     description='A CNN-based segmentation technique using MRI images from BrainLab',
     author=['Maged Goubran', 'Hassan Akhavein', 'Edward Ntiri'],
