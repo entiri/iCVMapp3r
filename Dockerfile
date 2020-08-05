@@ -47,9 +47,10 @@ RUN curl -LO https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.
 ENV PATH=/opt/miniconda/bin:${PATH}
 
 # Install all needed packages based on pip installation, also update pip
+ENV PATH=/root/.local/bin:${PATH}
+RUN pip install --upgrade pip --user
 RUN git clone https://github.com/entiri/iCVMapp3r.git && \
     cd iCVMapp3r && \
-    python -m pip install --upgrade pip --user && \
     pip install git+https://www.github.com/keras-team/keras-contrib.git && \
     pip install -e .[icvmapper]
     
