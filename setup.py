@@ -40,8 +40,8 @@ setup(
         'keras-contrib', 'pandas', 'numpy', 'plotly', 'PyQt5', 'termcolor'
     ],
     extras_require={
-        "icvmapper": ["tensorflow==2.0.0"],
-        "icvmapper_gpu": ["tensorflow-gpu==2.0.0"],
+        "icvmapper": ["tensorflow"],
+        "icvmapper_gpu": ["tensorflow-gpu"],
     },
     entry_points={'console_scripts': ['icvmapper=icvmapper.cli:main']},
     keywords=[
